@@ -1,18 +1,18 @@
 {
-    "name": "@lightningchart/mcp-server",
+    "name": "@lightningchart/trader-mcp-server",
     "version": "1.0.7",
     "description": "MCP server that gives AI agents LightningChart JS Trader source-of-truth guidance.",
     "type": "module",
-    "homepage": "https://github.com/Lightning-Chart/lightningchart-js-mcp-server#readme",
+    "homepage": "https://github.com/Lightning-Chart/lightningchart-js-trader-mcp-server#readme",
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@github.com/Lightning-Chart/lightningchart-js-mcp-server.git"
+        "url": "git+ssh://git@github.com/Lightning-Chart/lightningchart-js-trader-mcp-server.git"
     },
     "bugs": {
-        "url": "https://github.com/Lightning-Chart/lightningchart-js-mcp-server/issues"
+        "url": "https://github.com/Lightning-Chart/lightningchart-js-trader-mcp-server/issues"
     },
     "bin": {
-        "lightningchart-mcp-server": "./dist/index.js"
+        "lightningchart-trader-mcp-server": "./dist/index.js"
     },
     "files": [
         "dist",
@@ -39,6 +39,7 @@
         "model-context-protocol",
         "charts",
         "data-visualization",
+        "trading",
         "javascript",
         "typescript",
         "webgl",
