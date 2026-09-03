@@ -1,0 +1,63 @@
+{
+    "name": "@lightningchart/mcp-server",
+    "version": "1.0.7",
+    "description": "MCP server that gives AI agents LightningChart JS Trader source-of-truth guidance.",
+    "type": "module",
+    "homepage": "https://github.com/Lightning-Chart/lightningchart-js-mcp-server#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Lightning-Chart/lightningchart-js-mcp-server.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Lightning-Chart/lightningchart-js-mcp-server/issues"
+    },
+    "bin": {
+        "lightningchart-mcp-server": "./dist/index.js"
+    },
+    "files": [
+        "dist",
+        "content",
+        "README.md",
+        "LICENSE",
+        "package.json"
+    ],
+    "scripts": {
+        "generate:worker-content": "node scripts/generate-worker-content.mjs",
+        "build": "npm run generate:worker-content && tsc -p tsconfig.json && tsc -p tsconfig.worker.json",
+        "check": "npm run generate:worker-content && tsc -p tsconfig.json --noEmit && tsc -p tsconfig.worker.json",
+        "prepack": "npm run build",
+        "start": "node dist/index.js",
+        "dev:worker": "npm run generate:worker-content && node scripts/wrangler.mjs dev",
+        "deploy:worker": "npm run generate:worker-content && node scripts/wrangler.mjs deploy",
+        "dry-run:worker": "npm run generate:worker-content && node scripts/wrangler.mjs deploy --dry-run"
+    },
+    "keywords": [
+        "lightningchart",
+        "lcjs-trader",
+        "trader",
+        "mcp",
+        "model-context-protocol",
+        "charts",
+        "data-visualization",
+        "javascript",
+        "typescript",
+        "webgl",
+        "coding-agents",
+        "ai-agent"
+    ],
+    "author": "LightningChart Ltd.",
+    "license": "MIT",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.13.0",
+        "agents": "^0.17.3"
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "^5.20260713.1",
+        "@types/node": "^22.0.0",
+        "typescript": "^5.8.0",
+        "wrangler": "^4.110.0"
+    },
+    "engines": {
+        "node": ">=20"
+    }
+}
