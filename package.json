@@ -1,6 +1,6 @@
 {
     "name": "@lightningchart/trader-mcp-server",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "MCP server that gives AI agents LightningChart JS Trader source-of-truth guidance.",
     "type": "module",
     "homepage": "https://github.com/Lightning-Chart/lightningchart-js-trader-mcp-server#readme",
